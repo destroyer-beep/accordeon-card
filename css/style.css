@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+body {
+    height: 100vh;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+section {
+    background-color: white;
+    height: 505px;
+    width: 920px;
+    border-radius: 3%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.image, .list {
+    display: inline-block;
+    width: 460px;
+    height: 505px;
+    padding: 0;
+    margin: 0;
+}
+
+.image {
+    background-image: url(../img/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left -80px top 60px;
+    position: relative;
+}
+
+.image img {
+    position: absolute;
+    top: 40%;
+    left: -93px;
+}
+
+.list h1 {
+    font-size: 26px;
+    font-weight: 700;
+    padding-top: 70px;
+    padding-left: 38px;
+}
+
+.list li {
+    padding: 20px 0;
+    font-size: 12px;
+    font-weight: 400;
+    list-style-type: none;
+    width: 350px;
+    position: relative;
+}
+
+.list li a {
+    text-decoration: none;
+    color: hsl(238, 29%, 16%);
+}
+
+.list li a:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+li:before {
+    content: url(../img/icon-arrow-down.svg);
+    position: absolute;
+    text-align: right;
+    right: 50px;
+}
+
