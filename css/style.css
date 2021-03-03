@@ -29,9 +29,9 @@ section {
 }
 
 .image {
-    background-image: url(../img/illustration-woman-online-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: left -80px top 60px;
+    background-image: url(../img/illustration-woman-online-desktop.svg), url(../img/bg-pattern-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left -80px top 60px, left -570px top -310px;
     position: relative;
 }
 
@@ -55,6 +55,7 @@ section {
     list-style-type: none;
     width: 350px;
     position: relative;
+    border-bottom: 1px solid hsl(238, 29%, 16%);
 }
 
 .list li a {
@@ -66,10 +67,23 @@ section {
     color: hsl(14, 88%, 65%);
 }
 
-li:before {
-    content: url(../img/icon-arrow-down.svg);
-    position: absolute;
-    text-align: right;
-    right: 50px;
+.list li a:visited {
+    color: hsl(238, 29%, 16%);
 }
 
+.list li a:active {
+    color: hsl(238, 29%, 16%);
+}
+
+.list li p {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.arrow {
+    float: right;
+}
+
+.description {
+    display: none;
+}
