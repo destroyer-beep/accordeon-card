@@ -1,31 +1,15 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-    const decription = document.querySelectorAll('.decription'),
-          arrow = document.querySelectorAll('.arrow');
-
-    function hideTabs() {
-        description.forEach(item => {
-            item.style.display = 'none';
+    const list = document.querySelectorAll('.list-item');
+    
+    for(item of list) {
+        item.addEventListener('click', function(e) {
+            for (i of list) {
+                i.classList.remove('active');
+            }
+            if (e.target.classList.contains('list-head') || e.target.classList.contains('arrow')) {
+                this.classList.toggle('active');
+            }
         });
-
     }
-
-    function showTabs(i) {
-        description[i].style.display = 'inline';
-    }
-
-    arrow.addEventListener('click', (e) => {
-        const target = e.target;
-        
-        if (target && target.classList.contains('arrow')) {
-            arrow.forEach((item, i) => {
-                if (target == i) {
-                    hideTabs();
-                    showTabs(i);
-                }
-            });
-        }
-    });
 });
-
-
